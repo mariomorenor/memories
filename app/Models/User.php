@@ -46,4 +46,10 @@ class User extends Authenticatable
     {
         return $this->image_url;
     }
+
+    public function adminlte_desc()
+    {
+        return ';)';
+    }
+    
 }

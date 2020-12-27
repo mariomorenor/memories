@@ -19,5 +19,20 @@ Route::get('/', function () {
 
 Auth::routes(["register"=>false]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::middleware(["auth"])->group(function(){
+    // HOME
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+    // USER
+
+    Route::get("user/profile",[App\Http\Controllers\UserController::class,"index"])->name("user.profile");
+
+});
+
+
+
+
+
+
 
