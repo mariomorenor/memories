@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,12 +23,12 @@ Auth::routes(["register"=>false]);
 
 Route::middleware(["auth"])->group(function(){
     // HOME
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 
     // USER
 
-    Route::get("user/profile",[App\Http\Controllers\UserController::class,"index"])->name("user.profile");
+    Route::get("user/profile",[UserController::class,"edit"])->name("user.profile");
 
 });
 
