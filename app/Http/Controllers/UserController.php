@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+
 
 class UserController extends Controller
 {
@@ -15,7 +18,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        
+        return view("user.profile.index")->with(["user"=>Auth::user()]);
     }
 
     /**
@@ -70,7 +73,25 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        return DB::transaction(function() use($request, $user){
+            
+            $user->fill($request->all());
+            
+            if ($request->hasFile("profile_photo")) {
+                
+                $image = $request->file("profile_photo");
+                
+                $image_path = Storage::putFileAs("public/$user->id",$image,"profile_photo.png");
+
+                $user->image_url = Storage::url($image_path);
+            }
+
+            $user->save();
+            
+
+
+            return redirect()->route("user.profile.index");
+        });
     }
 
     /**

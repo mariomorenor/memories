@@ -28,8 +28,14 @@ Route::middleware(["auth"])->group(function(){
 
     // USER
 
-    Route::get("user/profile",[UserController::class,"edit"])->name("user.profile");
-
+    Route::resource("user/profile",UserController::class)->parameters([
+        "profile"=>"user"
+    ])->names([
+        "index" => "user.profile.index",
+        "update" => "user.profile.update",
+        "edit" => "user.profile.edit",
+    ]);
+    
 });
 
 
