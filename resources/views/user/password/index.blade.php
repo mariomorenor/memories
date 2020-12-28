@@ -9,20 +9,28 @@
                     @csrf
                     @method('PUT')
                     <div class="form-group">
-                        <a href="{{ route('user.profile.index') }}" class="btn btn-secondary">Regresar <i class="fas fa-sign-out-alt"></i></a>
                         <button type="button" class="btn btn-success" id="btn_change_password">Guardar <i class="far fa-save"></i></button>
                     </div>
                     <div class="form-group">
                         <label for="password">Contraseña Actual:</label>
-                        <input type="password" required class="form-control" name="actual_password" id="input_actual_password">
+                        <div class="input-group">
+                            <input type="password" required class="form-control" name="actual_password" id="input_actual_password">
+                            <span class="input-group-addon"><button class="btn btn-outline-info ml-2" type="button"><i class="fas fa-eye"></i></button></span>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="password">Nueva Contraseña:</label>
-                        <input type="password" required class="form-control" name="password" id="input_password">
+                        <div class="input-group">
+                            <input type="password" required class="form-control" name="password" id="input_password">
+                            <span class="input-group-addon"><button class="btn btn-outline-info ml-2" type="button"><i class="fas fa-eye"></i></button></span>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="password_confirmation">Repetir Contraseña:</label>
-                        <input type="password" required class="form-control" name="password_confirmation" id="input_password_confirmation">
+                        <div class="input-group">
+                            <input type="password" required class="form-control" name="password_confirmation" id="input_password_confirmation">
+                            <span class="input-group-addon"><button class="btn btn-outline-info ml-2" type="button"><i class="fas fa-eye"></i></button></span>
+                        </div>
                     </div>
                 </form>
             </div>
