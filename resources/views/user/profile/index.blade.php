@@ -7,7 +7,7 @@
                 <h3>Perfil de Usuario</h3>
                 <div class="bg-white rounded shadow p-3">
                     <div class="form-group">
-                        <a href="{{ route('user.profile.edit', ['user'=>$user]) }}" class="btn btn-primary">Editar</a>
+                        <a href="{{ route('user.profile.edit', ['user'=>$user]) }}" class="btn btn-primary">Editar <i class="fas fa-user-edit"></i></a>
                     </div>
                     <div class="row">
                         <div class="col-12 col-sm-7 col-md-5 mx-auto">
@@ -23,7 +23,7 @@
                         <div class="col-12 col-sm-5 col-md-5 mx-auto">
                             <div class="form-group">
                                 <div class=" d-flex justify-content-center">
-                                    <img class="shadow rounded " id="img_user_profile_img" src="{{ $user->image_url }}" alt="Profile_image"> 
+                                    <img class="shadow rounded border border-black" id="img_user_profile_img" src="{{ $user->image_url }}" alt="Profile_image"> 
                                 </div>
                             </div>
                         </div>
@@ -36,10 +36,8 @@
 
 @push('css')
     <link rel="stylesheet" href="{{ asset('css/user/profile/edit.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/filepond.css') }}">
 @endpush
 
 @push('js')
     <script src="{{ asset('js/user/profile/edit.js') }}"></script>
-    <script src="{{ asset('js/filepond.js') }}"></script>
 @endpush

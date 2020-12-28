@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 
 
@@ -83,25 +84,26 @@ class UserController extends Controller
                 
                 $image_path = Storage::putFileAs("public/$user->id",$image,"profile_photo.png");
 
-                $user->image_url = Storage::url($image_path);
+                $user->image_url = asset(Storage::url($image_path))."?".rand(1,9999);
+            }
+
+            if ($request->has("password")) {
+                $user->password = Hash::make($request->password);
             }
 
             $user->save();
             
-
-
-            return redirect()->route("user.profile.index");
+            return redirect()->route("user.profile.index")->with("message","success");
         });
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(User $user)
     {
         //
+    }
+
+    public function change_password(Request $request)
+    {
+        return view("user.password.index")->with(["user"=>Auth::user()]);
     }
 }

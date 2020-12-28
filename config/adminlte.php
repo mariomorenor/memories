@@ -248,10 +248,11 @@ return [
             'text' => 'profile',
             'url'  => 'user/profile',
             'icon' => 'fas fa-fw fa-user',
+            'active'=> ['user/profile','user/profile/*/edit']
         ],
         [
             'text' => 'change_password',
-            'url'  => 'admin/settings',
+            'url'  => 'user/profile/change-password',
             'icon' => 'fas fa-fw fa-lock',
         ],
         [

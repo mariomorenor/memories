@@ -28,6 +28,8 @@ Route::middleware(["auth"])->group(function(){
 
     // USER
 
+    Route::get('user/profile/change-password',[UserController::class,'change_password'])->name("user.profile.change-password");
+
     Route::resource("user/profile",UserController::class)->parameters([
         "profile"=>"user"
     ])->names([
