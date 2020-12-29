@@ -41,7 +41,7 @@ return [
                 'purpose' => 'any'
             ],
             '512x512' => [
-                'path' => '/images/icons/GooglePlayStore.png',
+                'path' => env("APP_URL")."images/icons/GooglePlayStore.png",
                 'purpose' => 'any'
             ],
         ],
@@ -63,7 +63,7 @@ return [
                 'description' => 'Shortcut Link 1 Description',
                 'url' => '/',
                 'icons' => [
-                    "src" => "images/icons/GooglePlayStore.png",
+                    "src" => "public/images/icons/GooglePlayStore.png",
                     "purpose" => "any"
                 ]
             ],

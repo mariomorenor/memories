@@ -9,29 +9,38 @@
                     @csrf
                     @method('PUT')
                     <div class="form-group mb-0">
-                        <button type="button" class="btn btn-success" id="btn_change_password">Guardar <i class="far fa-save"></i></button>
+                        <button type="submit" class="btn btn-success" id="btn_change_password">Guardar <i class="far fa-save"></i></button>
                     </div>
                     <div class="row">
                         <div class="col-12 mx-auto col-sm-5 col-md-5 col-lg-5">
                             <div class="form-group">
                                 <label for="password">Contraseña Actual:</label>
                                 <div class="input-group">
-                                    <input type="password" required class="form-control" name="actual_password" id="input_actual_password">
+                                    <input type="password" autofocus required class="form-control @error('actual_password') is-invalid @enderror" name="actual_password" id="input_actual_password">
                                     <span class="input-group-addon"><button id="btn_see_actual_password" class="btn btn-outline-info ml-2" type="button"><i class="fas fa-eye"></i></button></span>
+                                    @error('actual_password')
+                                        <span class="text-danger">{{$message}}</span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="password">Nueva Contraseña:</label>
                                 <div class="input-group">
-                                    <input type="password" required class="form-control" name="password" id="input_password">
+                                    <input type="password" required class="form-control @error('password') is-invalid @enderror" name="password" id="input_password">
                                     <span class="input-group-addon"><button id="btn_see_password" class="btn btn-outline-info ml-2" type="button"><i class="fas fa-eye"></i></button></span>
+                                    @error('password')
+                                        <span class="text-danger">{{$message}}</span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="password_confirmation">Repetir Contraseña:</label>
                                 <div class="input-group">
-                                    <input type="password" required class="form-control" name="password_confirmation" id="input_password_confirmation">
+                                    <input type="password" required class="form-control @error('password_confirmation') is-invalid @enderror" name="password_confirmation" id="input_password_confirmation">
                                     <span class="input-group-addon"><button id="btn_see_password_confirmation" class="btn btn-outline-info ml-2" type="button"><i class="fas fa-eye"></i></button></span>
+                                    @error('password_confirmation')
+                                        <span class="text-danger">{{$message}}</span>
+                                    @enderror
                                 </div>
                             </div>
                         </div>
@@ -44,4 +53,13 @@
 
 @push('js')
 <script src="{{ asset('js/user/profile/change_password.js') }}"></script>
+@if (session("message") == "success")
+    <script>
+        Toast.fire({
+            icon: 'success',
+            title:'Operación Realizada con Éxito!'
+        });
+    </script>
+@endif
 @endpush
+
