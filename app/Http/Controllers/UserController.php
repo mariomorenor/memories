@@ -41,7 +41,9 @@ class UserController extends Controller
     public function update(UserRequest $request, User $user)
     {
             return DB::transaction(function() use($request, $user){
-            
+                
+                $hasPassword = false;
+
                 $user->fill($request->all());
                 
                 if ($request->hasFile("profile_photo")) {
@@ -55,11 +57,15 @@ class UserController extends Controller
     
                 if ($request->has("password")) {
                     $user->password = Hash::make($request->password);
+                    $hasPassword = true;
                 }
     
                 $user->save();
                 
-                return redirect()->route("user.profile.change-password")->with("message","success");
+                if ($hasPassword) {
+                    return redirect()->route("user.profile.change-password")->with("message","success");
+                }
+                return redirect()->route("user.profile.index")->with("message","success");
             });
     }
 

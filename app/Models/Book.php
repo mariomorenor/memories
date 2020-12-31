@@ -10,4 +10,11 @@ class Book extends Model
     use HasFactory;
 
     protected $guarded = [];
+
+    protected $with = ["pictures"];
+
+    public function pictures()
+    {
+        return $this->hasMany(Picture::class);
+    }
 }

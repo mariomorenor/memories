@@ -4,10 +4,51 @@
 
 .book_description {
   word-break: break-all;
-  height: 3.4rem;
+  height: 3rem;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.book_header {
+  text-shadow: 1px 1px 1px #b7c7cc;
+}
+
+.pagination_links {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+a .card {
+  color: black;
+}
+
+.content-header,
+.content-header .container-fluid {
+  padding: 0;
+}
+
+.container_cover {
+  height: 100%;
+}
+
+.cover-book-banner {
+  position: absolute;
+  width: 100%;
+  height: 35%;
+}
+
+@media only screen and (max-width: 768px) {
+  .cover-book-banner {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+  }
+}
+
+.book-name {
+  position: absolute;
+  bottom: 0;
 }
 

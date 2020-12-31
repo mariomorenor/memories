@@ -22,5 +22,12 @@ class UsersSeeder extends Seeder
                 "password"=>Hash::make("123")
             ]
         );
+        User::updateOrInsert(
+            ["email"=>"andrea@lamejoramiga.com"],
+            [
+                "name"=>"Andrea Manzaba",
+                "password"=>Hash::make("123")
+            ]
+        );
     }
 }

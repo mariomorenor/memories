@@ -25,10 +25,6 @@ Auth::routes(["register"=>false]);
 
 Route::middleware(["auth"])->group(function(){
 
-    // HOME
-    // Route::get('/home', [HomeController::class, 'index'])->name('home');
-
-
     // USER
 
     Route::get('user/profile/change-password',[UserController::class,'change_password'])->name("user.profile.change-password");
