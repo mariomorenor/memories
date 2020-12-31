@@ -11,7 +11,7 @@
 @endpush
 
 @section('content')
-<div class="container pb-2">
+<div class="container py-2">
         {{ $books->render() }}
     <div class="row">
         @foreach ($books as $book)

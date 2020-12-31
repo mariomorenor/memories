@@ -237,7 +237,7 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'Mis Libros',
+            'text'        => 'Álbumes',
             'url'         => '/books',
             'icon'        => 'fas fa-book',
         ],
