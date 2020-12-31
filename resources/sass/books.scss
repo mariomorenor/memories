@@ -1,0 +1,12 @@
+.cover-book{
+    width: 100%;
+}
+
+.book_description{
+    word-break: break-all;
+    height: 3.4rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}

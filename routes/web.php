@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return redirect()->route("pictures.index");
+    return redirect()->route("books.index");
 });
 
 Auth::routes(["register"=>false]);

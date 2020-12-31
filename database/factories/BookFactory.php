@@ -5,7 +5,7 @@ namespace Database\Factories;
 use App\Models\Book;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class BooksFactory extends Factory
+class BookFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
@@ -25,6 +25,7 @@ class BooksFactory extends Factory
             'name'=>$this->faker->name,
             'description'=>$this->faker->text(),
             'user_id'=>1,
+            "cover"=>$this->faker->imageUrl(640,480,"cats"),
             'date'=>$this->faker->date($format = 'Y-m-d', $max = 'now')
         ];
     }
