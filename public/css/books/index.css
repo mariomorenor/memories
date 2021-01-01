@@ -1,0 +1,25 @@
+.cover-book {
+  width: 100%;
+}
+
+.book_description {
+  word-break: break-all;
+  height: 3rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.book_header {
+  text-shadow: 1px 1px 1px #b7c7cc;
+}
+
+.card {
+  transition: all 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.2);
+}
+

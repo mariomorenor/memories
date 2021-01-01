@@ -13,5 +13,6 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
-    .sass('resources/sass/books.scss', 'public/css')
+    .sass('resources/sass/books/index.scss', 'public/css/books')
+    .sass('resources/sass/books/edit.scss', 'public/css/books')
     .sourceMaps();

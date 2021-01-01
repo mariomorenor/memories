@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Book;
 use App\Models\Picture;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BookController extends Controller
 {
@@ -15,7 +16,7 @@ class BookController extends Controller
      */
     public function index()
     {
-        $books = Book::paginate();
+        $books = Book::where("user_id",Auth::user()->id)->paginate();
 
         return view("books.index")->with(["books"=>$books]);
     }
@@ -39,7 +40,7 @@ class BookController extends Controller
 
     public function edit(Book $book)
     {
-        //
+        return view("books.edit")->with(["book"=>$book]);
     }
 
     public function update(Request $request, Book $book)

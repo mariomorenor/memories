@@ -541,27 +541,27 @@ eval("// removed by extract-text-webpack-plugin//# sourceURL=[module]\n//# sourc
 
 /***/ }),
 
-/***/ "./resources/sass/books.scss":
-/*!***********************************!*\
-  !*** ./resources/sass/books.scss ***!
-  \***********************************/
+/***/ "./resources/sass/books/index.scss":
+/*!*****************************************!*\
+  !*** ./resources/sass/books/index.scss ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// removed by extract-text-webpack-plugin//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvc2Fzcy9ib29rcy5zY3NzP2E4OGEiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Fzcy9ib29rcy5zY3NzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gcmVtb3ZlZCBieSBleHRyYWN0LXRleHQtd2VicGFjay1wbHVnaW4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/sass/books.scss\n");
+eval("// removed by extract-text-webpack-plugin//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvc2Fzcy9ib29rcy9pbmRleC5zY3NzPzIwNzkiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Fzcy9ib29rcy9pbmRleC5zY3NzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gcmVtb3ZlZCBieSBleHRyYWN0LXRleHQtd2VicGFjay1wbHVnaW4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/sass/books/index.scss\n");
 
 /***/ }),
 
 /***/ 0:
-/*!*****************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/books.scss ***!
-  \*****************************************************************************************/
+/*!***********************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/books/index.scss ***!
+  \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\laragon\www\memories\resources\js\app.js */"./resources/js/app.js");
 __webpack_require__(/*! C:\laragon\www\memories\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\laragon\www\memories\resources\sass\books.scss */"./resources/sass/books.scss");
+module.exports = __webpack_require__(/*! C:\laragon\www\memories\resources\sass\books\index.scss */"./resources/sass/books/index.scss");
 
 
 /***/ })

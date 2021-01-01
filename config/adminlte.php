@@ -50,7 +50,7 @@ return [
     'logo_img_class' => 'brand-image img-circle elevation-3 rounded-circle',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs rounded-circle',
-    'logo_img_alt' => 'AdminLTE',
+    'logo_img_alt' => 'Memories',
 
     /*
     |--------------------------------------------------------------------------
@@ -189,7 +189,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => '/',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
